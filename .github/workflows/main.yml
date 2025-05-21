@@ -31,7 +31,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "22"
           cache: 'npm'
           cache-dependency-path: 'landing-page/package-lock.json'
       - name: Setup Pages
@@ -41,7 +41,7 @@ jobs:
       - name: Build with Vite
         run: npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Changed to upload-pages-artifact
+        uses: actions/upload-pages-artifact@v4  # Changed to upload-pages-artifact
         with:
           path: landing-page/dist  # Simplified the path
 
