@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import {motion, useAnimationControls} from "motion/react";
+import { motion, useAnimationControls } from "framer-motion";
 
 const AnimationControls = () =>{
     const controls = useAnimationControls();

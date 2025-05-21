@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { motion, MotionConfig } from "motion/react";
+import { motion, MotionConfig } from "framer-motion";
 
 const Gestures = () => {
     return(
