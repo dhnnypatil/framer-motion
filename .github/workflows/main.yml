@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Fixed path to ensure the artifact gets uploaded correctly
-          path: dist
+          path: ./landing-page/dist
 
   deploy:
     environment:
