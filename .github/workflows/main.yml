@@ -20,7 +20,6 @@ jobs:
     defaults:
       run:
         working-directory: landing-page
-        working-directory: landing-page
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,11 +41,15 @@ jobs:
         run: npm run build
         
       - name: Debug directory contents
-        run: ls -la dist
+        run: |
+          pwd
+          ls -la
+          ls -la dist
         
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
+          # Fixed path to ensure the artifact gets uploaded correctly
           path: dist
 
   deploy:
