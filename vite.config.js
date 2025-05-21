@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // Using relative path for GitHub Pages compatibility
-  base: '/hirebuddy_landing-page',
+  base: '/hirebuddy_landing-page/',
   // build: {
   //   // Ensure source maps are generated for easier debugging
   //   sourcemap: true,
