@@ -42,15 +42,31 @@ jobs:
         
       - name: Debug directory contents
         run: |
+          echo "Current working directory:"
           pwd
+          echo "Contents of current directory:"
           ls -la
+          echo "Contents of dist directory:"
           ls -la dist
         
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v3
+        # Switch to an approach that doesn't use paths relative to working-directory
+        # Move outside the default working directory context
+        working-directory: ${{ github.workspace }}
+        run: |
+          # Create artifact with specific name that deploy-pages expects
+          tar --dereference --hard-dereference --directory landing-page/dist -cf artifact.tar .
+          echo "::group::Artifact contents"
+          tar -tf artifact.tar | sort
+          echo "::endgroup::"
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
-          # Fixed path to ensure the artifact gets uploaded correctly
-          path: ./landing-page/dist
+          name: github-pages
+          path: artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
   deploy:
     environment:

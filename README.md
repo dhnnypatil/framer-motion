@@ -1,29 +1,12 @@
-# Framer Motion - HireBuddy Landing Page
+# React + Vite
 
-This repository contains a beautiful React landing page built with Framer Motion animations.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Live Demo
+Currently, two official plugins are available:
 
-Check out the landing page in action: [https://dhnnypatil.github.io/framer-motion/](https://dhnnypatil.github.io/framer-motion/)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Project Features
+## Expanding the ESLint configuration
 
-- Smooth animations using Framer Motion
-- Responsive design with Tailwind CSS
-- Dark mode support
-- Interactive UI components
-
-## Getting Started
-
-### To run the project locally:
-```bash
-cd landing-page
-npm install
-npm run dev
-```
-
-### To build for production:
-```bash
-cd landing-page
-npm run build
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
