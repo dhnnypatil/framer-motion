@@ -27,22 +27,23 @@ jobs:
         working-directory: landing-page  # Set working directory to landing-page folder
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "18"
           cache: 'npm'
           cache-dependency-path: 'landing-page/package-lock.json'
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm ci
       - name: Build with Vite
         run: npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-artifact@v4  # Updated to v4
         with:
+          name: github-pages
           path: ./landing-page/dist
 
   # Deployment job
@@ -55,4 +56,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v3  # Updated to v3
