@@ -1,24 +1,29 @@
-# Framer Motion Experiments
+# Framer Motion - HireBuddy Landing Page
 
-This repository contains experiments with Framer Motion in React.
-
-## Project Structure
-
-- **landing-page**: A beautiful React landing page showcasing Framer Motion animations (deployed to GitHub Pages)
-- **demo**: A collection of Framer Motion animation examples and experiments (local development only)
+This repository contains a beautiful React landing page built with Framer Motion animations.
 
 ## Live Demo
 
-Check out the landing page in action: [https://YOUR-USERNAME.github.io/framer-motion/](https://YOUR-USERNAME.github.io/framer-motion/)
+Check out the landing page in action: [https://dhnnypatil.github.io/framer-motion/](https://dhnnypatil.github.io/framer-motion/)
+
+## Project Features
+
+- Smooth animations using Framer Motion
+- Responsive design with Tailwind CSS
+- Dark mode support
+- Interactive UI components
 
 ## Getting Started
 
-### To run the landing page:
+### To run the project locally:
 ```bash
-npm run dev:landing
+cd landing-page
+npm install
+npm run dev
 ```
 
-### To run the animation demos:
+### To build for production:
 ```bash
-npm run dev:demo
+cd landing-page
+npm run build
 ```

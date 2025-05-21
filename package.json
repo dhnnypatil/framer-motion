@@ -2,26 +2,25 @@
   "name": "framer-motion",
   "private": true,
   "version": "1.0.0",
-  "description": "Framer Motion experiments with React",
+  "description": "Framer Motion landing page with React",
   "scripts": {
-    "dev:landing": "cd landing-page && npm run dev",
-    "build:landing": "cd landing-page && npm run build",
-    "dev:demo": "cd demo && npm run dev",
-    "build:demo": "cd demo && npm run build"
+    "dev": "cd landing-page && npm run dev",
+    "build": "cd landing-page && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR-USERNAME/framer-motion.git"
+    "url": "git+https://github.com/dhnnypatil/framer-motion.git"
   },
   "keywords": [
     "framer-motion",
     "react",
-    "animation"
+    "animation",
+    "landing-page"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "dhnnypatil",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/YOUR-USERNAME/framer-motion/issues"
+    "url": "https://github.com/dhnnypatil/framer-motion/issues"
   },
-  "homepage": "https://github.com/YOUR-USERNAME/framer-motion#readme"
+  "homepage": "https://github.com/dhnnypatil/framer-motion#readme"
 }

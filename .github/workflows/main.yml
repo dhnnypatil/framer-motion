@@ -41,9 +41,10 @@ jobs:
       - name: Build with Vite
         run: npm run build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3  # Changed to upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: landing-page/dist  # Simplified the path
+          # Updated path since we don't have a demo folder anymore
+          path: landing-page/dist
 
   # Deployment job
   deploy:
