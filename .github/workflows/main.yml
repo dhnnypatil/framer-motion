@@ -4,49 +4,49 @@ on:
   push:
     branches: ["main"]
     paths:
-      - 'landing-page/**'  # Only trigger when changes in landing-page directory
+      - 'landing-page/**'
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: landing-page  # Set working directory to landing-page folder
+        working-directory: landing-page
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: 'npm'
           cache-dependency-path: 'landing-page/package-lock.json'
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Install dependencies
         run: npm ci
+
       - name: Build with Vite
         run: npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Updated path since we don't have a demo folder anymore
-          path: landing-page/dist
+          path: dist  # FIXED path
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
