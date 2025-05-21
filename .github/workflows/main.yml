@@ -47,7 +47,7 @@ jobs:
           ls -la dist
         
       - name: Upload pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           # Fixed path to ensure the artifact gets uploaded correctly
           path: dist
